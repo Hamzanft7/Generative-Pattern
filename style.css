@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: grid;
+  place-content: center center;
+  background: #271D1C;
+}
+
+.container {
+  width: 1000px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+    0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.container__txt {
+  background: #ffffff;
+  padding: 48px;
+  font-family: "Raleway", sans-serif;
+}
+
+.title {
+  --gradient-color-1:#D92028; 
+  --gradient-color-2:#C08E66;
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  background: linear-gradient(45deg, var(--gradient-color-1), var(--gradient-color-2) 80%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.blurb {
+  font-size: 18px;
+  margin-bottom: 32px;
+  color: gray;
+  line-height: 1.4;
+}
+
+.btn {
+  width: 160px;
+  height: 40px;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  position: relative;
+  padding: 0;
+  
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: 0.2s;
+}
+.btn:hover {
+
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active {
+
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn .bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 40px 40px;
+  justify-content: space-between;
+  opacity: 0;
+}
+
+.btn .btn__txt {
+  position: relative;
+  z-index: 5;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+.container__pattern {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.item {
+  position: relative;
+  background: var(--bg-color);
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: var(--clip);
+          clip-path: var(--clip);
+  background: var(--fg-color);
+}
